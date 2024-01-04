@@ -16,7 +16,7 @@
 
 🔧 **Tecnologias e Habilidades:**
 - Instalação do NodeJS e json-server.
-- Mockagem de uma API para simulação.
+- Mockup de uma API para simulação.
 - Criação de requisições GET e POST.
 - JavaScript assíncrono para interações suaves.
 - Manipulação do DOM para atualizações instantâneas.
