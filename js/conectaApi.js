@@ -7,6 +7,7 @@ async function listarVideosDaApi() {
 async function criaVideo(titulo, descricao, url, imagem) {
     const conexao = await fetch("http://localhost:3000/videos", {
         method: "POST",
+        // Para uma solicitação POST, você precisará passar um objeto das opções de configuração como um segundo argumento
         headers: {
             "Content-type": "application/json" // Que tipo de arquivo que está sendo enviado
         },
@@ -22,8 +23,16 @@ async function criaVideo(titulo, descricao, url, imagem) {
     return conexaoConvertida;
 }
 
+// Para filtro de pesquisa
+async function buscaVideo(termoDeBusca) {
+    const conexao = await fetch(`http://localhost:3000/videos?q=${termoDeBusca}`)
+    const conexaoConvertida = await conexao.json();
+    console.log(conexaoConvertida);
+    return conexaoConvertida;
+}
 
 export const conectaApi = {
     listarVideosDaApi,
-    criaVideo
+    criaVideo,
+    buscaVideo
 };
