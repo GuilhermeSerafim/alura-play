@@ -20,5 +20,11 @@ async function buscaVideo(eventoDoBotao) {
     // Adicionando apenas os vídeos filtrados
     buscaNaApiComOValorDoInput.forEach(video => ulVideos.appendChild(
         constroiCardLi(video.titulo, video.descricao, video.url, video.imagem)));
+    if(buscaNaApiComOValorDoInput.length == 0) {
+        ulVideos.innerHTML = `
+            <div class="erro"><h2 class="mensagem__titulo">Não existem videos com o termo "${inputPesquisar.value}"</h2>
+            <img src=img/not-found.png class="erro__imagem"></img><div>
+            `
+    }
 
 }
