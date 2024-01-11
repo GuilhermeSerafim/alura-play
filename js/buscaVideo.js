@@ -13,8 +13,8 @@ async function buscaVideo(eventoDoBotao) {
     const ulVideos = document.querySelector("[data-lista]");
 
     // Removendo todos os vídeos
-    while(ulVideos.firstChild) {
-        ulVideos.removeChild(ulVideos.firstChild);
+    while(ulVideos.firstChild) { // Verifica se há filho
+        ulVideos.removeChild(ulVideos.firstChild); // Remove o filho
     }
 
     // Adicionando apenas os vídeos filtrados
